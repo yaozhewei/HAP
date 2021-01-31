@@ -1,4 +1,4 @@
-[![Block](imgs/illustration.pdf)](imgs/illustration.pdf)
+![Block](imgs/illustration.pdf)
 
 
 
