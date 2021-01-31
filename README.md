@@ -49,7 +49,7 @@ bash install.sh
 
 ## Related Work
 
-- [Hessian-Aware Pruning and Optimal Neural Implant]()
+- [Hessian-Aware Pruning and Optimal Neural Implant](https://arxiv.org/abs/2101.08940)
 
 
 
