@@ -1,4 +1,8 @@
-![Block](imgs/illustration.pdf)
+<p align="center">
+  <img src="imgs/neuron_implant.pdf" width="840">
+  <br />
+  <br />
+  </p>
 
 
 
