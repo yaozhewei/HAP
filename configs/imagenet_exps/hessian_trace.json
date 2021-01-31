@@ -1,0 +1,22 @@
+{
+    "exp_name": "vgg16",
+    "network": "vgg16",
+    "depth": 32,
+    "dataset": "cifar10",
+    "batch_size": 64,
+    "epoch": "160",
+    "learning_rate": "1e-3",
+    "weight_decay": "1e-4",
+    "ratio": "0.9",
+    "fisher_mode": "hessian_trace",
+    "fisher_type": "true",
+    "fix_layers": 0,
+    "checkpoint": "./cifar10_result/wd_0.0005/best.t7",
+    "pruner": "hessian_pruner",
+    "normalize": false,
+    "prune_mode": "one_pass",
+    "prune_ratio_limit": 0.95,
+    "fix_rotation": false,
+    "re_init": false,
+    "use_patch": false
+}
