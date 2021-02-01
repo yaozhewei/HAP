@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="imgs/neuron_implant.png" width="600">
+  <img src="imgs/illustration.png" width="600">
   <br />
   <br />
   </p>
