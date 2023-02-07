@@ -62,3 +62,7 @@ bash install.sh
 ## License
 
 HAP is released under the [MIT license](https://github.com/Zhen-Dong/HAWQ/blob/main/LICENSE).
+
+## Copyright
+
+THIS SOFTWARE AND/OR DATA WAS DEPOSITED IN THE BAIR OPEN RESEARCH COMMONS REPOSITORY ON 02/07/23.
