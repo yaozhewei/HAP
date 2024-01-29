@@ -24,7 +24,7 @@ from utils.network_utils import (get_bottleneck_builder,
                                  get_network)
 from utils.prune_utils import (ConvLayerRotation,
                                LinearLayerRotation)
-from utils.compute_flops import compute_model_param_flops
+from utils.compute_flops import print_model_param_flops
 from models.resnet_imagenet import *
 
 
@@ -68,7 +68,7 @@ def init_network(config, logger, device, imagenet=True):
     net = get_network(network=config.network,
                       depth=config.depth,
                       dataset=config.dataset)
-
+    imagenet=False
     if imagenet:
         if config.network == "resnet" or config.network == "resnet_bottle":
             if config.depth==18:
@@ -80,7 +80,9 @@ def init_network(config, logger, device, imagenet=True):
     else:
         print('==> Loading checkpoint from %s.' % config.load_checkpoint)
         logger.info('==> Loading checkpoint from %s.' % config.load_checkpoint)
-        checkpoint = torch.load(config.load_checkpoint)
+        #print("Printing Checkpoint",config.load_checkpoint)
+        #checkpoint = torch.load(config.load_checkpoint)
+        checkpoint = torch.load("cifar10_result/pretrain/cifar10_resnet56_best.t7")
         if checkpoint.get('args', None) is not None:
             args = checkpoint['args']
             print('** [%s-%s%d] Acc: %.2f%%, Epoch: %d, Loss: %.4f' % (args.dataset, args.network, args.depth,
@@ -193,7 +195,8 @@ def main(config):
     stats = {}
     if config.data_distributed:
         torch.distributed.init_process_group(backend="nccl")
-    device = torch.device('cuda:0,1')
+    if torch.cuda.is_available():
+        device = torch.device('cuda')
     criterion = torch.nn.CrossEntropyLoss()
 
     logger, writer = init_summary_writer(config)

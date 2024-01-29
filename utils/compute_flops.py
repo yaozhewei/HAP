@@ -16,7 +16,7 @@ def print_model_param_nums(model=None):
     return total
 
 
-def compute_model_param_flops(model=None, input_res=224, multiply_adds=True, cuda=False):
+def print_model_param_flops(model=None, input_res=224, multiply_adds=True, cuda=False):
 
     prods = {}
     def save_hook(name):

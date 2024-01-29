@@ -14,8 +14,8 @@ from utils.network_utils import stablize_bn
 from tqdm import tqdm
 
 from .hessian_fact import get_trace_hut
-from .pyhessian import hessian
-from .pyhessian import group_product, group_add, normalization, get_params_grad, hessian_vector_product, orthnormal, cpu2gpu, gpu2cpu
+from pyhessian import hessian
+#from pyhessian import group_product, group_add, normalization, get_params_grad, hessian_vector_product, orthnormal, cpu2gpu, gpu2cpu
 
 import numpy as np
 import time
