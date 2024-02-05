@@ -12,7 +12,7 @@ from utils.network_utils import get_network
 from utils.data_utils import get_dataloader
 from utils.common_utils import PresetLRScheduler, makedirs
 
-from utils.compute_flops import print_model_param_flops, print_model_param_flops
+from utils.compute_flops import print_model_param_flops
 
 import numpy as np
 
